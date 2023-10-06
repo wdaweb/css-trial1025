@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>針筒</title>
+    <style>
+        *::before,
+        *::after{
+            box-sizing: border-box;
+        }
+        
+        .container{
+            width: 700px;
+            height:130px;
+            /* border:1px solid salmon; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .container::before{
+            content: "";
+            width: 580px;
+            height: 60px;
+            position: absolute;
+            border-radius: 5px;
+            border:1px solid black;
+            background:linear-gradient(white,30%,rgb(211, 211, 211),70%,white);
+            top: 35px;
+            z-index: -2;
+        }
+
+        .container::after{
+            content: "";
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            border-radius: 5px;
+            border:1px solid black;
+            background:linear-gradient(white,30%,rgb(211, 211, 211),70%,white);
+            top: 15px;
+            z-index: -1;
+        }
+        
+        .needle{
+            width: 700px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top:50%;
+            z-index:-3;
+        }   
+
+        .block{
+            width: 440px;
+            height: 120px;
+            border-top:1px solid black;
+            border-bottom:1px solid black;
+            background:linear-gradient(white,30%,rgb(211, 211, 211),70%,white);
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+            /* z-index:1 ; */
+        }
+
+        .block::before{
+            content: "";
+            width:220px;
+            height: 120px;
+            background:linear-gradient(rgb(255, 255, 172),30%,rgb(211, 211, 211),70%,rgb(255, 255, 172));
+            position: absolute;
+            right: 0;
+        }
+
+        .block::after{
+            content:"" ;
+            width: 440px;
+            height: 20px;
+            position: absolute;
+            /* border:1px solid black; */
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 90%, rgb(77, 77, 77) 10%);
+            background-size: 20px;
+            top: 0;
+        }
+
+        .line{
+            width:20px;
+            height: 120px;
+            background:black;
+            position: absolute;
+            right: 50%;
+        }
+
+        .word{
+            font-family:"微軟正黑體";
+            position: absolute;
+            bottom: 0;
+            color: gray;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="needle"></div>
+        <div class="block">
+            <div class="line"></div>
+            <div class="word">Made in Taiwan</div>
+        </div>
+    </div>
+</body>
+</html>

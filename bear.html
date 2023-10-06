@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kumamon</title>
+    <style>
+        *::before,
+        *::after{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+        }
+
+        .face{
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+
+        .face::before{
+            content: "";
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50%;
+            top: 40%;
+            left: -5%;
+        }
+
+        .face::after{
+            content: "";
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50%;
+            top: 40%;
+            right: -5%;
+        }
+
+        .ear_l{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            border: 20px solid black;
+            position: absolute;
+            left: 10%;
+            top: -2%;
+        }
+
+        .ear_r{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            border: 20px solid black;
+            position: absolute;
+            right: 10%;
+            top: -2%;
+        }
+
+        .eye_l{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: black;
+            border: 15px solid white;
+            position: absolute;
+            left: 20%;
+            top: 20%;
+        }
+
+        .eye_r{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: black;
+            border: 15px solid white;
+            position: absolute;
+            right: 20%;
+            top: 20%;
+        }
+
+        .mouth{
+            width: 200px;
+            height: 150px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .mouth::before{
+            content: "";
+            width: 60px;
+            height: 30px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 10%;
+            right: 70px;
+        }
+
+        .mouth::after{
+            content: "";
+            width: 120px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: 40px;
+        }
+
+        .v{
+            width: 40px;
+            height: 35px;
+            border-style: solid;
+            border-width: 100px 120px 0 120px;
+            border-color: #ffffff transparent transparent transparent;
+            position: absolute;
+            bottom: 0;
+            right: 110px;
+        }
+        .v::before{
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 60px 0 60px;
+            border-color: #000000 transparent transparent transparent;
+            position: absolute;
+            right: 10px;
+            
+        }
+
+        .v::after{
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+            border-width: 50px 50px 0 50px;
+            border-color: #000000 transparent transparent transparent;
+            position: absolute;
+            top: -300%;
+            right: -70%;
+            
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="ear_l"></div>
+        <div class="ear_r"></div>
+        <div class="eye_l"></div>
+        <div class="eye_r"></div>
+        <div class="mouth"></div>
+        <div class="v"></div>
+    </div>
+    
+</body>
+</html>
